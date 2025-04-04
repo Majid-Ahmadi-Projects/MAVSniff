@@ -32,7 +32,7 @@ pip install pymavlink
 ### Run the Listener
 
 ```bash
-python "QGroundControl Listener.py"
+python "MAVSniff.py"
 ```
 
 The script will:
@@ -114,15 +114,6 @@ To focus only on mission-relevant messages, the script ignores:
 You can customize this filter in the script.
 
 ---
-
-## 🔍 Why Does QGC Send HEARTBEAT?
-
-Every MAVLink system (including GCS like QGC) sends a `HEARTBEAT` every 1 second to:
-- Announce its presence
-- Allow the autopilot to know a GCS is active
-- Prevent timeout/failsafe conditions
-
-The script does not display these messages unless you choose to log them.
 
 ---
 
